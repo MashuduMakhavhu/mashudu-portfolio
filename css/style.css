@@ -1049,4 +1049,109 @@ button {
         transition: none !important;
     }
 
+} 
+
+/* HOMEPAGE INTRODUCTION */
+
+.hero-description {
+    max-width: 510px;
+    margin: 22px auto 0;
+    color: #d0c8b8;
+    font-size: 13px;
+    line-height: 1.9;
 }
+
+
+/* HOMEPAGE ACTION BUTTONS */
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 48px;
+    padding: 0 22px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    transition: background .25s, color .25s, border-color .25s;
+}
+
+.hero-button span {
+    font-size: 14px;
+}
+
+.hero-button-primary {
+    background: var(--gold);
+    color: var(--black);
+    border: 1px solid var(--gold);
+}
+
+.hero-button-primary:hover {
+    background: var(--gold-light);
+    border-color: var(--gold-light);
+}
+
+.hero-button-secondary {
+    background: rgba(8,8,6,.3);
+    color: var(--white);
+    border: 1px solid rgba(230,220,195,.4);
+}
+
+.hero-button-secondary:hover {
+    color: var(--gold-light);
+    border-color: var(--gold-light);
+}
+
+.hero-button:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 4px;
+}
+
+
+/* MOBILE HOMEPAGE ADJUSTMENTS */
+
+@media (max-width: 680px) {
+
+    .hero-description {
+        max-width: 330px;
+        font-size: 11px;
+        line-height: 1.8;
+        margin-top: 19px;
+    }
+
+    .hero-actions {
+        gap: 10px;
+        margin-top: 27px;
+    }
+
+    .hero-button {
+        min-height: 45px;
+        padding: 0 15px;
+        font-size: 8px;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
